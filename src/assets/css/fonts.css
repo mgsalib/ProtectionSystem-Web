@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Droid';
+  src: url('../fonts/ArbFONTS-DroidKufi-Regular.eot');
+  src: url('../fonts/ArbFONTS-DroidKufi-Regular.eot') format('embedded-opentype'),
+    url('../fonts/DroidArabicKufi.svg') format('svg'),
+    url('../fonts/DroidArabicKufi.ttf') format('truetype'),
+    url('../fonts/DroidArabicKufi.woff') format('woff'),
+    url('../fonts/ArbFONTS-DroidKufi-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Droid';
+  src: url('../fonts/ArbFONTS-DroidKufi-Bold.eot');
+  src: url('../fonts/ArbFONTS-DroidKufi-Bold.eot') format('embedded-opentype'),
+    url('../fonts/DroidArabicKufi-Bold.svg') format('svg'),
+    url('../fonts/DroidArabicKufi-Bold.ttf') format('truetype'),
+    url('../fonts/DroidArabicKufi-Bold.woff') format('woff'),
+    url('../fonts/ArbFONTS-DroidKufi-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}

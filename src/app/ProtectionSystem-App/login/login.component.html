@@ -1,0 +1,63 @@
+<div class="container mb-3">
+
+  <!-- #region login form -->
+  <div class="login_form d-flex justify-content-between border-bottom border_gray-20 py-2">
+
+    <!-- Protection System logo -->
+    <div class="pl-3">
+      <a [routerLink]="">
+        <img src="assets/images/brand_logo.png" alt="Protection System logo" />
+      </a>
+    </div>
+
+    <!-- login form -->
+    <form class="flex-fill d-flex flex-column justify-content-center text-left pr-3">
+      <ul class="d-flex justify-content-end m-0 p-0">
+
+        <!-- language menu -->
+        <li class="pl-1">
+          <a mat-button [matMenuTriggerFor]="lang" class="btn btn_lang text_color-1 p-0"><i
+              class="fas fa-globe"></i></a>
+          <mat-menu #lang="matMenu">
+            <button mat-menu-item class="btn text_color-1 rounded-0 border-bottom border_gray-20">
+              <img src="assets/images/icon-lang-ar.png" width="24" alt="Arabic Language" />
+              <span class="mr-2">عربي</span>
+            </button>
+            <button mat-menu-item class="btn text_color-1 rounded-0 border-bottom border_gray-20">
+              <img src="assets/images/icon-lang-en.png" width="24" alt="English Language" />
+              <span class="mr-2">English</span>
+            </button>
+          </mat-menu>
+        </li>
+
+        <!-- email input -->
+        <li class="col-3 px-1"><input type="email" class="form-control" placeholder="البريد الإلكتروني" /></li>
+
+        <!-- passowrd input -->
+        <li class="col-3 d-flex flex-column justify-content-center px-1">
+          <input type="password" class="form-control" placeholder="كلمة السر" />
+          <a href="#" class="text-center text_color-3 pt-1">هل نسيت كلمة السر؟</a>
+        </li>
+
+        <!-- signin button -->
+        <li class="pr-1">
+          <button class="btn btn_color-1">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+        </li>
+      </ul>
+
+
+    </form>
+  </div>
+  <!-- #endregion -->
+
+  <!-- #region registartion form -->
+  <app-registration></app-registration>
+  <!-- #endregion -->
+
+</div>
+
+<!-- #region footer -->
+<app-footer></app-footer>
+<!-- #endregion -->
