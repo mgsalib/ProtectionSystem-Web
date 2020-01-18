@@ -1,0 +1,52 @@
+app-user-navbar {
+  position: relative;
+
+  .main_menu {
+    list-style: none;
+
+    >li {
+      >a {
+        display: block;
+        line-height: 34px;
+        border: 1px solid rgb(204, 204, 204);
+        color: rgb(125, 48, 42);
+        text-decoration: none;
+        border-radius: 3px;
+        padding: 0px 16px 0px 16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+
+        >i {
+          width: 25px;
+          font-size: 20px;
+          line-height: 25px;
+          text-align: center;
+          margin-left: 8px;
+        }
+      }
+
+      >a:hover,
+      >a:focus,
+      .active {
+        background-color: rgb(182, 146, 101);
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+
+  .main_toolbar {
+    top: 0px;
+    left: 0px;
+    width: calc(100% - 276px);
+    z-index: 1;
+
+    >ul {
+      list-style: none;
+    }
+  }
+}

@@ -1,4 +1,10 @@
 app-footer {
+  position: absolute;
+  top: auto;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
   .site_map {
     background: rgb(204, 204, 204);
     background: linear-gradient(0deg, rgba(204, 204, 204, 1) 0%, rgba(255, 255, 255, 1) 100%);

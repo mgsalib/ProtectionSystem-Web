@@ -36,6 +36,7 @@ $ProtectionSystem-Web-theme: mat-light-theme($ProtectionSystem-Web-primary, $Pro
 $colors: (color-1: #7d302a,
   color-2: #b69265,
   color-3: #2E2118,
+  green-success: #1CC964,
   gray-0: #ffffff,
   gray-5: #f2f2f2,
   gray-10: #e6e6e6,
@@ -86,10 +87,16 @@ body {
   text-align: right;
 }
 
+/* content margin  ============================== */
+.content_margin {
+  margin-bottom: 131px;
+}
+
 /* form  ============================== */
 input[type=text].form-control,
 input[type=email].form-control,
-input[type=password].form-control {
+input[type=password].form-control,
+select.form-control {
   border-color: map-get($colors, color-2);
   border-radius: 19px;
   padding: 0px 19px;
@@ -97,16 +104,65 @@ input[type=password].form-control {
   height: 38px;
 }
 
+textarea.form-control {
+  border-color: map-get($colors, color-2);
+  border-radius: 19px;
+  padding: 16px;
+  font-size: inherit;
+}
+
 .form-control:focus {
   box-shadow: 0 0 0 0.2rem rgba(map-get($colors, color-1), 0.2);
 }
 
+.custom-file {
+  height: 38px;
+
+  .custom-file-input {
+    height: 38px;
+  }
+
+  .custom-file-label {
+    border-color: map-get($colors, color-2);
+    border-radius: 19px;
+    padding: 0px 19px;
+    margin: 0px;
+    font-size: inherit;
+    height: 38px;
+  }
+
+  .custom-file-label::after {
+    content: "\f093";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    top: 0px;
+    right: auto;
+    bottom: 0px;
+    left: 0px;
+    height: auto;
+    border-radius: 19px 0px 0px 19px;
+    border-right: inherit;
+    border-left: 0px;
+    background-color: rgb(125, 48, 42);
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    width: 75px;
+  }
+}
+
 /* buttons ============================== */
 .btn {
+  font-size: 12px;
   line-height: 38px;
   border-width: 0px;
   border-radius: 19px;
-  padding: 0px 14px;
+  padding: 0px 19px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -121,6 +177,17 @@ input[type=password].form-control {
   color: map-get($colors, color-1);
 }
 
+.btn_color-2 {
+  background-color: map-get($colors, color-2);
+  color: map-get($colors, gray-0);
+}
+
+.btn_color-2:hover,
+.btn_color-2:focus {
+  background-color: rgba(map-get($colors, color-2), 0.3);
+  color: map-get($colors, color-2);
+}
+
 /* section title ============================== */
 .section_title {
   line-height: 43px;
@@ -130,6 +197,96 @@ input[type=password].form-control {
   }
 }
 
+/* shadow types ============================== */
+.box_shadow_1 {
+  -webkit-box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* page layout classes ============================== */
+.user_navbar {
+  width: 260px;
+  background-color: map-get($colors, gray-5);
+}
+
+.page_content {
+  -webkit-box-flex: 1;
+  flex: 1 1 calc(100% - 276px);
+  max-width: calc(100% - 276px);
+  margin-top: 47px;
+  padding-top: 16px;
+  overflow-y: auto;
+}
+
+/* widget card ============================== */
+.widget_card {
+  .widget_image {
+    width: 87px;
+    height: 87px;
+    top: 0px;
+    right: 32px;
+  }
+
+  >aside {
+    padding-right: 95px;
+
+    >h3 {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    >p {
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+
+  >hr {
+    margin: 0px 0px 8px 0px;
+  }
+
+  >div {
+    >button {
+      min-width: 132px;
+    }
+  }
+
+  .widget_title {
+    top: 0px;
+    right: 32px;
+    left: 32px;
+    font-size: 18px;
+  }
+
+  .widget_body {
+    padding-top: 51px;
+
+    >table {
+      >thead {
+        >tr {
+          >th {}
+        }
+      }
+
+      >tbody {
+        >tr {
+
+          >td:nth-child(1),
+          td:nth-child(2),
+          td:nth-child(4) {
+            vertical-align: middle;
+            text-align: center;
+          }
+
+          >td:nth-child(1),
+          td:nth-child(2) {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
 
 /* breakpoint ============================== */
 /* medium devices (tablets, 576px and up) */

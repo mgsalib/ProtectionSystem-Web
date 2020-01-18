@@ -1,0 +1,46 @@
+<!-- #region system logo -->
+<div class="bg_gray-0 rounded-bottom box_shadow_1 py-2 px-3 mb-4">
+  <a class="d-block" routerLink="/UserDashboard">
+    <img src="assets/images/brand_logo.png" class="img-fluid" alt="Protection System logo" />
+  </a>
+</div>
+<!-- #endregion -->
+
+<!-- #region nav menu -->
+<ul class="main_menu m-0 p-0">
+  <li class="mb-2">
+    <a routerLink="/UserDashboard" routerLinkActive="active">
+      <i class="fas fa-shapes"></i> الرئيسية
+    </a>
+  </li>
+  <li class="mb-2">
+    <a routerLink="/OpenedCases" routerLinkActive="active">
+      <i class="fas fa-balance-scale"></i> استشارات مفتوحة
+    </a>
+  </li>
+  <li class="mb-2">
+    <a routerLink="/ClosedCases" routerLinkActive="active">
+      <i class="fas fa-balance-scale"></i> استشارات مغلقة
+    </a>
+  </li>
+  <li>
+    <a routerLink="/MyAccount" routerLinkActive="active">
+      <i class="fas fa-user-alt"></i> حسابي
+    </a>
+  </li>
+</ul>
+<!-- #endregion -->
+
+<!-- #region tool bar -->
+<div class="main_toolbar bg_gray-0 position-fixed border-bottom border_gray-50 text-left py-2 px-3">
+  <ul class="d-md-flex justify-content-md-end m-0 p-0">
+    <li><a class="btn rounded text_color-2" routerLink="/UserDashboard">
+        <span class="badge bg_color-1 text_gray-0">4</span>
+        <i class="fas fa-bell"></i>
+      </a>
+    </li>
+    <li><a class="btn rounded text_color-3" routerLink="/UserDashboard"><i class="fas fa-globe"></i></a></li>
+    <li><a class="btn rounded text_color-3" routerLink="/UserDashboard"><i class="fas fa-user-alt"></i></a></li>
+  </ul>
+</div>
+<!-- #endregion -->

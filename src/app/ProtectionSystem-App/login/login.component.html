@@ -1,11 +1,11 @@
-<div class="container mb-3">
+<div class="container content_margin">
 
   <!-- #region login form -->
   <div class="login_form d-flex justify-content-between border-bottom border_gray-20 py-2">
 
     <!-- Protection System logo -->
     <div class="pl-3">
-      <a [routerLink]="">
+      <a routerLink="/">
         <img src="assets/images/brand_logo.png" alt="Protection System logo" />
       </a>
     </div>
@@ -36,12 +36,12 @@
         <!-- passowrd input -->
         <li class="col-3 d-flex flex-column justify-content-center px-1">
           <input type="password" class="form-control" placeholder="كلمة السر" />
-          <a href="#" class="text-center text_color-3 pt-1">هل نسيت كلمة السر؟</a>
+          <a routerLink="/Forgetpassword" class="text-center text_color-3 pt-1">هل نسيت كلمة السر؟</a>
         </li>
 
         <!-- signin button -->
         <li class="pr-1">
-          <button class="btn btn_color-1">
+          <button class="btn btn_color-1" routerLink="/UserDashboard">
             <i class="fas fa-chevron-left"></i>
           </button>
         </li>

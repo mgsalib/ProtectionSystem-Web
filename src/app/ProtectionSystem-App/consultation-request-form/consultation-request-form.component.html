@@ -1,0 +1,83 @@
+<div class="h-100 d-flex justify-content-between">
+
+  <!-- user menu and toolbar -->
+  <div class="user_navbar px-3 pb-3">
+    <app-user-navbar></app-user-navbar>
+  </div>
+
+  <!-- page content -->
+  <div class="page_content px-3" *ngIf="!SendSuccess">
+
+    <!-- section title -->
+    <div class="section_title border-bottom border_color-2 text-center pb-1 mb-3">
+      <h2 class="d-inline font-weight-bold m-0">فتح مشورة جديدة</h2>
+    </div>
+
+    <div class="container">
+      <form>
+        <!-- row 01 -->
+        <div class="d-flex justify-content-between mb-2">
+          <div class="form-group col-6 pr-0 m-0">
+            <label for="CaseType" class="text_color-2 font-weight-bold px-3">نوع الاستشارة </label>
+            <select class="form-control" id="CaseType">
+              <option>- أختر -</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- row 02 -->
+        <div class="d-flex justify-content-between mb-2">
+          <div class="form-group col-12 px-0 m-0">
+            <label for="CaseDescription" class="text_color-2 font-weight-bold px-3">تفاصيل المشورة</label>
+            <textarea class="form-control" id="CaseDescription" maxlength="400" rows="5"></textarea>
+          </div>
+        </div>
+
+        <!-- row 03 -->
+        <div class="d-flex justify-content-between mb-2">
+          <div class="form-group flex-fill pl-3 m-0">
+            <label for="CaseDescription" class="text_color-2 font-weight-bold px-3">إضافة مرفق </label>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="customFile">
+              <label class="custom-file-label d-flex flex-column justify-content-center" for="customFile">
+                إضافة مرفق
+              </label>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column justify-content-end">
+            <button class="btn btn_color-2">إضافة مرفق جديد</button>
+          </div>
+        </div>
+
+        <!-- row 04 -->
+        <div class="d-flex justify-content-between mb-2">
+          <div class="form-group col-6 pr-0 m-0">
+            <label for="PaymentMethode" class="text_color-2 font-weight-bold px-3">طريقة الدفع </label>
+            <select class="form-control" id="PaymentMethode">
+              <option>- أختر -</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- row 05 -->
+        <div class="d-flex justify-content-center mt-4">
+          <button class="btn btn_color-1" (click)="OpenSuccessMsg()">ارسال</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- sucess message -->
+  <div class="page_content px-3" *ngIf="SendSuccess">
+    <div class="d-flex justify-content-around">
+      <div class="col-12 col-sm-6">
+        <div class="bg_green-success box_shadow_1 d-flex flex-column justify-content-center rounded text-center p-3">
+          <img src="assets/images/ico_check-shield.svg" class="mx-auto mb-3" />
+          <p class="text_gray-0 m-0">تم ارسال المشورة للمنظومة ... برجاء أنتظار الرد من داخل <a class="font-weight-bold text_gray-0"
+              routerLink="/OpenedCases">مشاورات مفتوحة</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
